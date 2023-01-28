@@ -1,0 +1,53 @@
+.comics__container {
+    display: flex;
+    flex-wrap: wrap;   
+    margin: auto;
+    max-width: 1200px;
+}
+
+.comics__item {
+    width: 250px;
+    margin: var(--spacing-large);
+    list-style: none;
+    background-color: var(--color-light);
+    transition: 0.5s;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.comics__item:hover {
+    transform: rotate(-3deg) scale(0.95);
+    filter: saturate(150%);
+}
+
+.comics__name {
+    display: flex;
+    margin: auto;
+    padding: var(--spacing-small) var(--spacing-medium);
+}
+
+.comics__img {
+    width: 250px;
+    display: flex;
+    justify-content: start;
+}
+
+.comics__characters-available::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: #4fbe00;
+    border-radius: 50%;
+    background-size: contain;
+    background-image: url('./img/characters_available.png');
+    bottom: 10px;
+    right: 10px;
+
+    position: absolute;
+}
+
